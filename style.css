@@ -1,0 +1,485 @@
+/* Government-Style Aadhaar Scanner CSS */
+:root {
+    --saffron: #FF9933;
+    --saffron-dark: #E68A2E;
+    --green: #28a745;
+    --green-light: #d4edda;
+    --white: #ffffff;
+    --light-grey: #f5f5f5;
+    --medium-grey: #e0e0e0;
+    --dark-grey: #333333;
+    --text-primary: #212529;
+    --text-secondary: #6c757d;
+    --shadow: 0 2px 8px rgba(0,0,0,0.1);
+    --border-radius: 8px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--light-grey);
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+/* Header Styles */
+.header {
+    background: linear-gradient(135deg, var(--saffron) 0%, var(--saffron-dark) 100%);
+    color: white;
+    padding: 16px 20px;
+    box-shadow: var(--shadow);
+}
+
+.header-content {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.ashoka-emblem {
+    font-size: 24px;
+    background: rgba(255,255,255,0.2);
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.app-title {
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.auth-info {
+    font-size: 12px;
+    opacity: 0.9;
+    background: rgba(255,255,255,0.15);
+    padding: 4px 10px;
+    border-radius: 4px;
+}
+
+/* Verification Banner */
+.verification-banner {
+    background: var(--green-light);
+    border-bottom: 1px solid var(--green);
+    padding: 12px 20px;
+}
+
+.verification-content {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.checkmark {
+    color: var(--green);
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.verification-text {
+    color: var(--green);
+    font-weight: 500;
+    font-size: 14px;
+}
+
+/* Main Content */
+.main-content {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Profile Card */
+.profile-card {
+    background: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    margin-bottom: 16px;
+    overflow: hidden;
+}
+
+.card-header {
+    background: var(--light-grey);
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--medium-grey);
+}
+
+.section-label {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.profile-content {
+    display: flex;
+    padding: 16px;
+    gap: 16px;
+}
+
+.photo-section {
+    flex-shrink: 0;
+}
+
+.photo-placeholder {
+    width: 100px;
+    height: 120px;
+    background: var(--light-grey);
+    border: 2px dashed var(--medium-grey);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.photo-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.photo-icon {
+    font-size: 40px;
+    color: var(--text-secondary);
+}
+
+.edit-photo-btn {
+    width: 100%;
+    margin-top: 8px;
+    padding: 6px 10px;
+    font-size: 11px;
+    background: var(--light-grey);
+    border: 1px solid var(--medium-grey);
+    border-radius: 4px;
+    cursor: pointer;
+    color: var(--text-secondary);
+    transition: all 0.2s;
+}
+
+.edit-photo-btn:hover {
+    background: var(--medium-grey);
+}
+
+.details-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+}
+
+.detail-item {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.detail-label {
+    font-size: 12px;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.detail-value {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+/* Info Sections */
+.info-section {
+    margin-bottom: 12px;
+}
+
+.info-card {
+    background: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    padding: 14px 16px;
+}
+
+.info-label {
+    font-size: 13px;
+    color: var(--text-secondary);
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.info-value {
+    font-size: 14px;
+    color: var(--text-primary);
+    line-height: 1.5;
+}
+
+.aadhaar-value {
+    font-family: 'Courier New', monospace;
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-size: 16px;
+    color: var(--text-primary);
+}
+
+.address-value {
+    white-space: pre-line;
+}
+
+/* Security Section */
+.security-section {
+    background: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    padding: 12px 16px;
+    margin-bottom: 16px;
+}
+
+.security-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 0;
+    color: var(--green);
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.security-item:not(:last-child) {
+    border-bottom: 1px solid var(--light-grey);
+}
+
+.lock-icon, .check-icon {
+    font-size: 14px;
+}
+
+/* Footer */
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--white);
+    padding: 12px 20px;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.1);
+}
+
+.action-btn {
+    padding: 12px 32px;
+    border: none;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.share-btn {
+    background: var(--green);
+    color: white;
+}
+
+.share-btn:hover {
+    background: #218838;
+}
+
+.edit-btn {
+    background: var(--saffron);
+    color: white;
+}
+
+.edit-btn:hover {
+    background: var(--saffron-dark);
+}
+
+/* Edit Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal-content {
+    background: var(--white);
+    border-radius: var(--border-radius);
+    width: 90%;
+    max-width: 500px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--medium-grey);
+    background: var(--light-grey);
+}
+
+.modal-header h3 {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--text-secondary);
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 13px;
+    color: var(--text-secondary);
+    margin-bottom: 6px;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--medium-grey);
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: inherit;
+    transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--saffron);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    padding: 16px 20px;
+    border-top: 1px solid var(--medium-grey);
+    background: var(--light-grey);
+}
+
+.btn-cancel,
+.btn-save {
+    padding: 10px 24px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-cancel {
+    background: var(--medium-grey);
+    color: var(--text-primary);
+}
+
+.btn-cancel:hover {
+    background: #c0c0c0;
+}
+
+.btn-save {
+    background: var(--green);
+    color: white;
+}
+
+.btn-save:hover {
+    background: #218838;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .profile-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .details-section {
+        align-items: center;
+    }
+    
+    .detail-item {
+        align-items: center;
+    }
+    
+    .footer {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .action-btn {
+        width: 100%;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .footer, .edit-photo-btn, .edit-btn, .share-btn {
+        display: none;
+    }
+    
+    .modal {
+        display: none !important;
+    }
+}
